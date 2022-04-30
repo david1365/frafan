@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'IranSans';
+  src: url("assets/fonts/IRANSansWeb.eot");
+  src: url("assets/fonts/IRANSansWeb.eot?#iefix") format('embedded-opentype');
+  src: url("assets/fonts/IRANSansWeb.woff2") format('woff2'), url("assets/fonts/IRANSansWeb.woff") format('woff'), url("assets/fonts/IRANSansWeb.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal
+}
+
+
+body {
+  font-family: IranSans, sans-serif !important;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.ant-menu-item .ant-menu-item-icon + span,
+.ant-menu-submenu-title .ant-menu-item-icon + span,
+.ant-menu-item .anticon + span,
+.ant-menu-submenu-title .anticon + span {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.ant-menu-submenu-expand-icon, .ant-menu-submenu-arrow {
+  left: 16px !important;
+  right: unset !important;
+}
