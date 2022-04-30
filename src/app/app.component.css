@@ -77,3 +77,11 @@ nz-content {
   background: #fff;
   height: 100%;
 }
+
+.ant-menu {
+  text-align: right !important;
+}
+
+.ant-menu-item {
+  padding-right: 48px !important;
+}
