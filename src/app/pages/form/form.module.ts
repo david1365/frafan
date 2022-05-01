@@ -1,29 +1,24 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { FormRoutingModule } from './form-routing.module';
+import {FormRoutingModule} from './form-routing.module';
 
-import { FormComponent } from './form.component';
-
-import { NzButtonModule } from 'ng-zorro-antd/button';
-
-import { NzGridModule } from 'ng-zorro-antd/grid';
-
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
+import {FormComponent} from './form.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
   imports: [
     FormRoutingModule,
-    NzButtonModule,
-    NzGridModule,
-    NzFormModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule,
+    MatIconModule
   ],
   declarations: [FormComponent],
   exports: [FormComponent]
