@@ -1,28 +1,33 @@
-<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
-  <div nz-row [nzGutter]="24">
-    <div nz-col [nzSpan]="8" *ngFor="let control of controlArray" [hidden]="!control.show">
-      <nz-form-item>
-        <nz-form-label [nzFor]="'field' + control.index">Field {{ control.index }}</nz-form-label>
-        <nz-form-control>
-          <input
-            nz-input
-            placeholder="placeholder"
-            [formControlName]="'field' + control.index"
-            [attr.id]="'field' + control.index"
-          />
-        </nz-form-control>
-      </nz-form-item>
+<div class="example-container">
+  <form [formGroup]="options">
+    <mat-checkbox [formControl]="hideRequiredControl">Hide required marker</mat-checkbox>
+    <div>
+      <label>Float label: </label>
+      <mat-radio-group [formControl]="floatLabelControl">
+        <mat-radio-button value="auto">Auto</mat-radio-button>
+        <mat-radio-button value="always">Always</mat-radio-button>
+      </mat-radio-group>
     </div>
-  </div>
-  <div nz-row>
-    <div nz-col [nzSpan]="24" class="search-area">
-      <button nz-button [nzType]="'primary'">Search</button>
-      <button nz-button (click)="resetForm()">Clear</button>
-      <a class="collapse" (click)="toggleCollapse()">
-        Collapse
-        <i nz-icon [nzType]="isCollapse ? 'down' : 'up'"></i>
-      </a>
-    </div>
-  </div>
-</form>
-<div class="search-result-list">Search Result List</div>
+
+    <mat-form-field appearance="fill" [hideRequiredMarker]="hideRequiredControl.value"
+      [floatLabel]="floatLabelControl.value">
+      <input matInput placeholder="Simple placeholder" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+      <mat-label>Both a label and a placeholder</mat-label>
+      <input matInput placeholder="Simple placeholder">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" [hideRequiredMarker]="hideRequiredControl.value"
+      [floatLabel]="floatLabelControl.value">
+      <mat-select required>
+        <mat-option>-- None --</mat-option>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-label>
+        <mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i>
+      </mat-label>
+    </mat-form-field>
+  </form>
+</div>
