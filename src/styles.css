@@ -1,5 +1,5 @@
-@import "ag-grid-community/dist/styles/ag-grid.css";
-@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-alpine.css";
 
 @font-face {
   font-family: 'IranSans';
@@ -30,5 +30,15 @@ body {
   right: unset !important;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-h1, .mat-headline, .mat-typography .mat-h1, .mat-typography .mat-headline, .mat-typography h1 {
+  font-family: IranSans, sans-serif !important;
+}
